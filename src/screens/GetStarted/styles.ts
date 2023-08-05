@@ -26,7 +26,7 @@ export const ContentWrapper = styled.View`
 
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.sizes.md};
   text-align: center;
   text-shadow: -3px -3px 10px ${({ theme }) => theme.colors.common.black};
   font-family: ${({ theme }) => theme.family.Montserrat.bold};
@@ -35,7 +35,7 @@ export const Title = styled.Text`
 export const SubTitle = styled.Text`
   margin-top: 16px;
   color: ${({ theme }) => theme.colors.common.white};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.sizes['2xs']};
   text-align: center;
   font-family: ${({ theme }) => theme.family.Montserrat.regular};
 `
