@@ -16,6 +16,10 @@ type ColorsT = {
     black: string
     darkGrey: string
   }
+  common: {
+    white: string
+    black: string
+  }
 }
 
 type FamilyT = {

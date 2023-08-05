@@ -3,16 +3,15 @@ import { SafeAreaView, Text } from 'react-native'
 import { ThemeProvider } from 'styled-components'
 import theme from './src/theme'
 import SplashScreen from 'react-native-splash-screen'
+import GetStarted from './src/screens/GetStarted'
 
 const App = () => {
   useEffect(SplashScreen.hide, [])
 
   return (
-    <SafeAreaView style={{ padding: 20 }}>
+    <SafeAreaView>
       <ThemeProvider theme={theme}>
-        <Text style={{ fontFamily: 'Montserrat-Regular', fontSize: 30 }}>
-          egergr
-        </Text>
+        <GetStarted />
       </ThemeProvider>
     </SafeAreaView>
   )
