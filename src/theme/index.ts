@@ -9,6 +9,10 @@ const theme: DefaultTheme = {
       black: '#0F0E0E',
       darkGrey: '#333333',
     },
+    common: {
+      black: '#000',
+      white: '#FFF',
+    },
   },
   sizes: {
     '3xs': 12,
