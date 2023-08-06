@@ -1,15 +1,14 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView } from 'react-native'
 import { ThemeProvider } from 'styled-components'
-import theme from './src/theme'
+import theme from 'src/theme'
+import { NavBar } from 'src/features/NavBar'
 
 const App = () => {
   return (
-    <SafeAreaView style={{ padding: 20 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <Text style={{ fontFamily: 'Montserrat-Regular', fontSize: 30 }}>
-          egergr
-        </Text>
+        <NavBar />
       </ThemeProvider>
     </SafeAreaView>
   )
