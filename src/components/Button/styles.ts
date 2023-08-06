@@ -9,7 +9,7 @@ export const TouchableOpacity = styled.TouchableOpacity`
 
 export const Text = styled.Text`
   color: ${({ theme }) => theme.colors.common.black};
-  font-size: ${({ theme }) => theme.sizes.md};
+  font-size: ${({ theme }) => theme.sizes.md}px;
   font-family: ${({ theme }) => theme.family.Montserrat.semiBold};
   text-align: center;
 `

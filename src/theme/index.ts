@@ -15,13 +15,13 @@ const theme: DefaultTheme = {
     },
   },
   sizes: {
-    '3xs': '12px',
-    '2xs': '14px',
-    xs: '18px',
-    sm: '20px',
-    md: '24px',
-    lg: '28px',
-    xl: '32px',
+    '3xs': 12,
+    '2xs': 14,
+    xs: 18,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
   },
   family: {
     Montserrat: {
