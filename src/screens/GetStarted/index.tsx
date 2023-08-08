@@ -1,4 +1,3 @@
-import { View } from 'react-native'
 import {
   Wrapper,
   Image,
@@ -6,12 +5,17 @@ import {
   SubTitle,
   ContentWrapper,
   ImageBackground,
-} from './styles'
-import Button from '../../components/Button'
+} from 'src/screens/GetStarted/styles'
+import Button from 'src/components/Button'
 
-import logo from '../../assets/images/spotify_logo.png'
+import logo from 'src/assets/images/spotify_logo.png'
+import { useNavigation } from '@react-navigation/native'
+import { Screens } from 'src/constants'
+import { NavigationType } from 'src/types'
 
 const GetStarted = (): JSX.Element => {
+  const navigation = useNavigation<NavigationType>()
+
   return (
     <Wrapper>
       <Image source={logo} />
@@ -25,7 +29,11 @@ const GetStarted = (): JSX.Element => {
           Discover your favorite tunes, anytime, anywhere. Let the rhythm take you on
           a journey to endless melodies and beats that resonate with your soul.
         </SubTitle>
-        <Button text="Get Started" style={{ marginTop: 32 }} />
+        <Button
+          onPress={() => navigation.navigate(Screens.MAIN)}
+          text="Get Started"
+          style={{ marginTop: 32 }}
+        />
       </ContentWrapper>
     </Wrapper>
   )

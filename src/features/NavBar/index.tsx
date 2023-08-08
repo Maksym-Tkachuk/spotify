@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
 import Home from 'src/screens/Home'
 import HomeActiveIcon from 'src/assets/home_active.svg'
 import PlayList from 'src/screens/PlayList'
@@ -24,90 +23,88 @@ export const NavBar = (): JSX.Element => {
   const { colors, family, sizes } = useTheme()
 
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          tabBarStyle: {
-            backgroundColor: colors.natural.darkGrey,
-            height: 75,
-            paddingBottom: 10,
-            borderTopWidth: 0,
-          },
-          tabBarLabelStyle: {
-            fontFamily: family.Montserrat.semiBold,
-            fontSize: sizes['3xs'],
-          },
-          tabBarActiveTintColor: colors.primary,
-          headerShown: false,
+    <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: colors.natural.darkGrey,
+          height: 75,
+          paddingBottom: 10,
+          borderTopWidth: 0,
+        },
+        tabBarLabelStyle: {
+          fontFamily: family.Montserrat.semiBold,
+          fontSize: sizes['3xs'],
+        },
+        tabBarActiveTintColor: colors.primary,
+        headerShown: false,
+      }}
+    >
+      <Tab.Screen
+        name={Screens.HOME}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButton
+              focused={focused}
+              activeIcon={<HomeActiveIcon />}
+              icon={<HomeIcon />}
+            />
+          ),
         }}
-      >
-        <Tab.Screen
-          name={Screens.HOME}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <TabButton
-                focused={focused}
-                activeIcon={<HomeActiveIcon />}
-                icon={<HomeIcon />}
-              />
-            ),
-          }}
-          component={Home}
-        />
-        <Tab.Screen
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <TabButton
-                focused={focused}
-                activeIcon={<PlayListActiveIcon />}
-                icon={<PlayListIcon />}
-              />
-            ),
-          }}
-          name={Screens.PLAY_LIST}
-          component={PlayList}
-        />
-        <Tab.Screen
-          options={{
-            tabBarLabelStyle: {
-              color: 'transparent',
-            },
-            tabBarIcon: () => (
-              <SpotifyButton>
-                <Spotify style={{ left: 1 }} />
-              </SpotifyButton>
-            ),
-          }}
-          name={Screens.SONGS}
-          component={Profile}
-        />
-        <Tab.Screen
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <TabButton
-                focused={focused}
-                activeIcon={<ClockActiveIcon />}
-                icon={<ClockIcon />}
-              />
-            ),
-          }}
-          name={Screens.HISTORY}
-          component={History}
-        />
-        <Tab.Screen
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <TabButton
-                focused={focused}
-                activeIcon={<UserActive />}
-                icon={<User />}
-              />
-            ),
-          }}
-          name={Screens.PROFILE}
-          component={Profile}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+        component={Home}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButton
+              focused={focused}
+              activeIcon={<PlayListActiveIcon />}
+              icon={<PlayListIcon />}
+            />
+          ),
+        }}
+        name={Screens.PLAY_LIST}
+        component={PlayList}
+      />
+      <Tab.Screen
+        options={{
+          tabBarLabelStyle: {
+            color: 'transparent',
+          },
+          tabBarIcon: () => (
+            <SpotifyButton>
+              <Spotify style={{ left: 1 }} />
+            </SpotifyButton>
+          ),
+        }}
+        name={Screens.SONGS}
+        component={Profile}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButton
+              focused={focused}
+              activeIcon={<ClockActiveIcon />}
+              icon={<ClockIcon />}
+            />
+          ),
+        }}
+        name={Screens.HISTORY}
+        component={History}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButton
+              focused={focused}
+              activeIcon={<UserActive />}
+              icon={<User />}
+            />
+          ),
+        }}
+        name={Screens.PROFILE}
+        component={Profile}
+      />
+    </Tab.Navigator>
   )
 }
