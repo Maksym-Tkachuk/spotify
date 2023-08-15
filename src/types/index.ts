@@ -7,6 +7,8 @@ export type RootStackParamsT = {
   Songs: undefined
   Get_Started: undefined
   Main: undefined
+  LogIn: undefined
+  Register: undefined
 }
 
 export type NavigationType = Awaited<NativeStackNavigationProp<RootStackParamsT>>

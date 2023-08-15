@@ -4,6 +4,10 @@ const theme: DefaultTheme = {
   colors: {
     primary: '#1ED760',
     secondary: '#D7BD1E',
+    grey: {
+      600: 'rgba(255,255,255,0.6)',
+      500: 'rgba(255,255,255,0.4)',
+    },
     natural: {
       lightGrey: '#F0F0F0',
       black: '#0F0E0E',
