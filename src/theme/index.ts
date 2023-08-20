@@ -4,20 +4,28 @@ const theme: DefaultTheme = {
   colors: {
     primary: '#1ED760',
     secondary: '#D7BD1E',
+    grey: {
+      600: 'rgba(255,255,255,0.6)',
+      500: 'rgba(255,255,255,0.4)',
+    },
     natural: {
       lightGrey: '#F0F0F0',
       black: '#0F0E0E',
       darkGrey: '#333333',
     },
+    common: {
+      black: '#000',
+      white: '#FFF',
+    },
   },
   sizes: {
-    '3xs': '12px',
-    '2xs': '14px',
-    xs: '18px',
-    sm: '20px',
-    md: '24px',
-    lg: '28px',
-    xl: '32px',
+    '3xs': 12,
+    '2xs': 14,
+    xs: 18,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
   },
   family: {
     Montserrat: {

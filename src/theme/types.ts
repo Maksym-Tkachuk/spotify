@@ -1,20 +1,28 @@
 type SizesT = {
-  '3xs': string
-  '2xs': string
-  xs: string
-  sm: string
-  md: string
-  lg: string
-  xl: string
+  '3xs': number
+  '2xs': number
+  xs: number
+  sm: number
+  md: number
+  lg: number
+  xl: number
 }
 
 type ColorsT = {
   primary: string
   secondary: string
+  grey: {
+    600: string
+    500: string
+  }
   natural: {
     lightGrey: string
     black: string
     darkGrey: string
+  }
+  common: {
+    white: string
+    black: string
   }
 }
 

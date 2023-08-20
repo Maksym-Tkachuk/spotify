@@ -1,15 +1,22 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView, StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components'
-import theme from './src/theme'
+import theme from 'src/theme'
+
+import { useEffect } from 'react'
+
+import SplashScreen from 'react-native-splash-screen'
+
+import { Navigation } from 'src/features/Navigation'
 
 const App = () => {
+  useEffect(SplashScreen.hide, [])
+
   return (
-    <SafeAreaView style={{ padding: 20 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <Text style={{ fontFamily: 'Montserrat-Regular', fontSize: 30 }}>
-          egergr
-        </Text>
+        <StatusBar translucent backgroundColor="transparent" />
+        <Navigation />
       </ThemeProvider>
     </SafeAreaView>
   )
