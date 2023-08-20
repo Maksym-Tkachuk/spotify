@@ -11,6 +11,10 @@ type SizesT = {
 type ColorsT = {
   primary: string
   secondary: string
+  grey: {
+    600: string
+    500: string
+  }
   natural: {
     lightGrey: string
     black: string

@@ -6,4 +6,6 @@ export enum Screens {
   SONGS = 'Songs',
   GET_STARTED = 'Get_Started',
   MAIN = 'Main',
+  LOG_IN = 'LogIn',
+  REGISTER = 'Register',
 }
